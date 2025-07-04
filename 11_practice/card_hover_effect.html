@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Hover Effects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            padding: 50px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            height: 200px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover .card-image::before {
+            opacity: 1;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .card-text {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .card-button {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        .card:hover .card-button {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .card-button:hover {
+            background: #5a67d8;
+        }
+
+        .card-flip {
+            perspective: 1000px;
+            height: 300px;
+        }
+
+        .card-flip-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card-flip:hover .card-flip-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-flip-front,
+        .card-flip-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .card-flip-front {
+            background: #3498db;
+        }
+
+        .card-flip-back {
+            background: #e74c3c;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Card Hover Effects</h1>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Lift Effect</h3>
+                    <p class="card-text">This card lifts up on hover with a shadow effect.</p>
+                    <button class="card-button">Learn More</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Smooth Animation</h3>
+                    <p class="card-text">Smooth transitions create engaging user experiences.</p>
+                    <button class="card-button">Learn More</button>
+                </div>
+            </div>
+            <div class="card card-flip">
+                <div class="card-flip-inner">
+                    <div class="card-flip-front">
+                        <h3>Flip Card</h3>
+                    </div>
+                    <div class="card-flip-back">
+                        <h3>Back Side</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
