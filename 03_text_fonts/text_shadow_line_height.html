@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Shadow and Line Height</title>
+    <style>
+        .simple-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .colored-shadow {
+            text-shadow: 3px 3px 6px #FF6B6B;
+            font-size: 24px;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .multiple-shadows {
+            text-shadow: 1px 1px 2px red, 2px 2px 4px blue, 3px 3px 6px green;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .glowing-text {
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+            color: white;
+            background-color: black;
+            padding: 10px;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .tight-line-height {
+            line-height: 1.2;
+            background-color: lightgray;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .normal-line-height {
+            line-height: 1.6;
+            background-color: lightblue;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .loose-line-height {
+            line-height: 2.0;
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Text Shadow and Line Height</h1>
+
+    <h2 class="simple-shadow">Simple Text Shadow</h2>
+    <h2 class="colored-shadow">Colored Text Shadow</h2>
+    <h2 class="multiple-shadows">Multiple Shadows</h2>
+    <h2 class="glowing-text">Glowing Text Effect</h2>
+
+    <div class="tight-line-height">
+        <h3>Tight Line Height (1.2)</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.</p>
+    </div>
+
+    <div class="normal-line-height">
+        <h3>Normal Line Height (1.6)</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.</p>
+    </div>
+
+    <div class="loose-line-height">
+        <h3>Loose Line Height (2.0)</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.</p>
+    </div>
+</body>
+
+</html>
