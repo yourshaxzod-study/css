@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Custom Properties</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --font-size: 16px;
+            --spacing: 20px;
+            --border-radius: 8px;
+        }
+
+        .theme-dark {
+            --primary-color: #34495e;
+            --secondary-color: #e74c3c;
+        }
+
+        .card {
+            background: var(--primary-color);
+            color: white;
+            padding: var(--spacing);
+            margin: var(--spacing);
+            border-radius: var(--border-radius);
+            font-size: var(--font-size);
+        }
+
+        .button {
+            background: var(--secondary-color);
+            color: white;
+            padding: calc(var(--spacing) / 2);
+            border: none;
+            border-radius: var(--border-radius);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Custom Properties Example</h2>
+        <button class="button">Click Me</button>
+    </div>
+    <div class="card theme-dark">
+        <h2>Dark Theme</h2>
+        <button class="button">Click Me</button>
+    </div>
+</body>
+
+</html>
