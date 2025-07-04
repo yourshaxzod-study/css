@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility Hidden</title>
+    <style>
+        .container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .visible-element {
+            background-color: lightblue;
+            padding: 15px;
+            margin: 10px;
+            border: 2px solid blue;
+        }
+
+        .hidden-element {
+            visibility: hidden;
+            background-color: lightgreen;
+            padding: 15px;
+            margin: 10px;
+            border: 2px solid green;
+        }
+
+        .none-element {
+            display: none;
+            background-color: lightcoral;
+            padding: 15px;
+            margin: 10px;
+            border: 2px solid red;
+        }
+
+        .collapse-element {
+            visibility: collapse;
+            background-color: lightyellow;
+            padding: 15px;
+            margin: 10px;
+            border: 2px solid orange;
+        }
+
+        .hover-visible {
+            visibility: hidden;
+            background-color: lightpink;
+            padding: 15px;
+            margin: 10px;
+            border: 2px solid pink;
+            transition: visibility 0.3s;
+        }
+
+        .hover-container:hover .hover-visible {
+            visibility: visible;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .hidden-row {
+            visibility: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Visibility Property Examples</h1>
+
+    <div class="container">
+        <h2>Visibility vs Display</h2>
+        <div class="visible-element">Visible Element</div>
+        <div class="hidden-element">Hidden Element (takes space)</div>
+        <div class="none-element">Display None Element (no space)</div>
+        <div class="visible-element">Another Visible Element</div>
+    </div>
+
+    <div class="container hover-container">
+        <h2>Hover to Show Hidden Element</h2>
+        <p>Hover over this container</p>
+        <div class="hover-visible">I appear on hover!</div>
+    </div>
+
+    <div class="container">
+        <h2>Table with Collapsed Row</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>25</td>
+                <td>New York</td>
+            </tr>
+            <tr class="hidden-row">
+                <td>Jane</td>
+                <td>30</td>
+                <td>London</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>35</td>
+                <td>Paris</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
