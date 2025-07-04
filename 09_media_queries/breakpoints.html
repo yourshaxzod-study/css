@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Breakpoints</title>
+    <style>
+        .container {
+            padding: 20px;
+            background: #ecf0f1;
+            text-align: center;
+        }
+
+        .box {
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                background: #e74c3c;
+            }
+
+            .box {
+                background: #c0392b;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                background: #f39c12;
+            }
+
+            .box {
+                background: #e67e22;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                background: #2ecc71;
+            }
+
+            .box {
+                background: #27ae60;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Responsive Design</h1>
+        <div class="box">Desktop: Blue</div>
+        <div class="box">Tablet: Red</div>
+        <div class="box">Mobile: Orange</div>
+        <div class="box">Large Screen: Green</div>
+    </div>
+</body>
+
+</html>
