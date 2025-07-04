@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow</title>
+    <style>
+        .container {
+            padding: 50px;
+            background-color: #f5f5f5;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 30px;
+            padding: 20px;
+            background-color: white;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .simple-shadow {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .colored-shadow {
+            box-shadow: 8px 8px 15px rgba(255, 107, 107, 0.5);
+        }
+
+        .inset-shadow {
+            box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .multiple-shadows {
+            box-shadow:
+                3px 3px 6px rgba(255, 0, 0, 0.3),
+                -3px -3px 6px rgba(0, 255, 0, 0.3),
+                0 0 15px rgba(0, 0, 255, 0.2);
+        }
+
+        .no-blur {
+            box-shadow: 10px 10px 0px black;
+        }
+
+        .spread-shadow {
+            box-shadow: 0 0 20px 10px rgba(255, 165, 0, 0.4);
+        }
+
+        .hover-shadow {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .elevated-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Box Shadow Examples</h1>
+
+    <div class="container">
+        <div class="box simple-shadow">Simple Shadow</div>
+        <div class="box colored-shadow">Colored Shadow</div>
+        <div class="box inset-shadow">Inset Shadow</div>
+        <div class="box multiple-shadows">Multiple Shadows</div>
+        <div class="box no-blur">No Blur Shadow</div>
+        <div class="box spread-shadow">Spread Shadow</div>
+        <div class="box hover-shadow">Hover Shadow</div>
+        <div class="box card-shadow">Card Shadow</div>
+        <div class="box elevated-shadow">Elevated Shadow</div>
+    </div>
+</body>
+
+</html>
