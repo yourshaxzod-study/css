@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units: px, em, rem</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        .px-example {
+            font-size: 20px;
+            padding: 10px;
+            margin: 5px;
+            background-color: lightblue;
+        }
+
+        .em-example {
+            font-size: 1.5em;
+            padding: 1em;
+            margin: 0.5em;
+            background-color: lightgreen;
+        }
+
+        .rem-example {
+            font-size: 1.5rem;
+            padding: 1rem;
+            margin: 0.5rem;
+            background-color: lightcoral;
+        }
+
+        .percent-example {
+            width: 50%;
+            padding: 2%;
+            margin: 1%;
+            background-color: lightyellow;
+        }
+
+        .nested {
+            font-size: 1.2em;
+            padding: 0.5em;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Units Comparison</h1>
+
+    <div class="px-example">
+        Pixels (px) - Fixed unit
+        <div class="nested">Nested element</div>
+    </div>
+
+    <div class="em-example">
+        Em unit - Relative to parent
+        <div class="nested">Nested element</div>
+    </div>
+
+    <div class="rem-example">
+        Rem unit - Relative to root
+        <div class="nested">Nested element</div>
+    </div>
+
+    <div class="percent-example">
+        Percentage unit - Relative to parent
+    </div>
+</body>
+
+</html>
