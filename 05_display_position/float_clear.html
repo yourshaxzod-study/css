@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Clear</title>
+    <style>
+        .container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid black;
+        }
+
+        .float-left {
+            float: left;
+            width: 150px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid blue;
+        }
+
+        .float-right {
+            float: right;
+            width: 150px;
+            height: 100px;
+            background-color: lightcoral;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid red;
+        }
+
+        .clear-left {
+            clear: left;
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .clear-right {
+            clear: right;
+            background-color: lightyellow;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .clear-both {
+            clear: both;
+            background-color: lightpink;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .image-float {
+            float: left;
+            margin: 0 15px 15px 0;
+            width: 150px;
+            height: 100px;
+            background-color: lightgray;
+            border: 1px solid gray;
+        }
+
+        .text-content {
+            text-align: justify;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Float and Clear Examples</h1>
+
+    <div class="container">
+        <h2>Basic Float</h2>
+        <div class="float-left">Float Left</div>
+        <div class="float-right">Float Right</div>
+        <p>This text flows around the floated elements. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+
+    <div class="container">
+        <h2>Clear Examples</h2>
+        <div class="float-left">Float Left</div>
+        <div class="float-right">Float Right</div>
+        <div class="clear-left">Clear Left</div>
+        <div class="clear-right">Clear Right</div>
+        <div class="clear-both">Clear Both</div>
+    </div>
+
+    <div class="container clearfix">
+        <h2>Clearfix Example</h2>
+        <div class="float-left">Float Left</div>
+        <div class="float-right">Float Right</div>
+        <p>This container uses clearfix to contain floated elements.</p>
+    </div>
+
+    <div class="container">
+        <h2>Image Float with Text</h2>
+        <div class="image-float">Image</div>
+        <div class="text-content">
+            <p>This is a common use case for float - wrapping text around an image. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+</body>
+
+</html>
