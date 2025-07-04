@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Properties</title>
+    <style>
+        .container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px;
+            height: 300px;
+            position: relative;
+            border: 2px solid black;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .static-box {
+            position: static;
+            background-color: blue;
+        }
+
+        .relative-box {
+            position: relative;
+            background-color: green;
+            top: 20px;
+            left: 30px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            background-color: red;
+            top: 50px;
+            right: 50px;
+        }
+
+        .fixed-box {
+            position: fixed;
+            background-color: purple;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+
+        .sticky-box {
+            position: sticky;
+            background-color: orange;
+            top: 0;
+            margin-top: 50px;
+        }
+
+        .relative-container {
+            position: relative;
+            background-color: lightblue;
+            height: 200px;
+            margin: 20px;
+            border: 2px dashed blue;
+        }
+
+        .absolute-child {
+            position: absolute;
+            background-color: darkred;
+            width: 80px;
+            height: 80px;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Position Property Examples</h1>
+
+    <div class="container">
+        <div class="box static-box">Static</div>
+        <div class="box relative-box">Relative</div>
+        <div class="box absolute-box">Absolute</div>
+    </div>
+
+    <div class="box fixed-box">Fixed</div>
+
+    <div class="box sticky-box">Sticky</div>
+
+    <div class="relative-container">
+        <p>Relative Container</p>
+        <div class="absolute-child">Absolute Child</div>
+    </div>
+
+    <div style="height: 1000px; background: linear-gradient(to bottom, white, gray);">
+        <p>Scroll down to see sticky and fixed positioning in action...</p>
+    </div>
+</body>
+
+</html>
