@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and ID Selectors</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            padding: 5px;
+        }
+
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+
+        .info {
+            color: blue;
+            font-style: italic;
+        }
+
+        #header {
+            background-color: darkblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #footer {
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Website Header</h1>
+    </div>
+
+    <p class="highlight">This text is highlighted.</p>
+    <p class="warning">This is a warning message.</p>
+    <p class="info">This is an info message.</p>
+    <p class="highlight warning">This has multiple classes.</p>
+
+    <div id="footer">
+        <p>Website Footer</p>
+    </div>
+</body>
+
+</html>
