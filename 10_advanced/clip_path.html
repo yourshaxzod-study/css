@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Clip Path</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .clip-box {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            margin: 0 auto;
+            transition: clip-path 0.3s ease;
+        }
+
+        .circle {
+            clip-path: circle(50% at 50% 50%);
+        }
+
+        .circle:hover {
+            clip-path: circle(70% at 50% 50%);
+        }
+
+        .triangle {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .triangle:hover {
+            clip-path: polygon(50% 20%, 20% 80%, 80% 80%);
+        }
+
+        .hexagon {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .hexagon:hover {
+            clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="clip-box circle"></div>
+        <div class="clip-box triangle"></div>
+        <div class="clip-box hexagon"></div>
+    </div>
+</body>
+
+</html>
