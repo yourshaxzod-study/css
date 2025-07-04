@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .pricing-header h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pricing-card.featured {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .plan-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .plan-price {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .plan-price span {
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .featured .plan-features li {
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .plan-button {
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .plan-button:hover {
+            background: #5a67d8;
+        }
+
+        .featured .plan-button {
+            background: white;
+            color: #667eea;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pricing-container">
+        <div class="pricing-header">
+            <h1>Choose Your Plan</h1>
+            <p>Select the perfect plan for your needs</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="plan-name">Enterprise</div>
+                <div class="plan-price">$39<span>/month</span></div>
+                <ul class="plan-features">
+                    <li>Unlimited Projects</li>
+                    <li>500GB Storage</li>
+                    <li>24/7 Phone Support</li>
+                    <li>All Features</li>
+                </ul>
+                <button class="plan-button">Get Started</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
