@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Flex Grow & Shrink</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .flex-container {
+            display: flex;
+            border: 2px solid #ddd;
+            background-color: #fafafa;
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .flex-item {
+            height: 80px;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 5px;
+            border-radius: 4px;
+            min-width: 60px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .flex-item:nth-child(2) {
+            background-color: #e74c3c;
+        }
+
+        .flex-item:nth-child(3) {
+            background-color: #2ecc71;
+        }
+
+        .flex-item:nth-child(4) {
+            background-color: #f39c12;
+        }
+
+        .flex-grow-0 {
+            flex-grow: 0;
+        }
+
+        .flex-grow-1 {
+            flex-grow: 1;
+        }
+
+        .flex-grow-2 {
+            flex-grow: 2;
+        }
+
+        .flex-grow-3 {
+            flex-grow: 3;
+        }
+
+        .flex-shrink-0 {
+            flex-shrink: 0;
+        }
+
+        .flex-shrink-1 {
+            flex-shrink: 1;
+        }
+
+        .flex-shrink-2 {
+            flex-shrink: 2;
+        }
+
+        .flex-basis-100 {
+            flex-basis: 100px;
+        }
+
+        .flex-basis-200 {
+            flex-basis: 200px;
+        }
+
+        .flex-basis-auto {
+            flex-basis: auto;
+        }
+
+        .flex-1 {
+            flex: 1;
+        }
+
+        .flex-2 {
+            flex: 2;
+        }
+
+        .flex-0-0-auto {
+            flex: 0 0 auto;
+        }
+
+        .flex-1-1-200 {
+            flex: 1 1 200px;
+        }
+
+        .narrow-container {
+            width: 300px;
+            max-width: 100%;
+        }
+
+        .wide-container {
+            width: 600px;
+            max-width: 100%;
+        }
+
+        .code-example {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .demo-label {
+            font-size: 10px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .large-item {
+            width: 200px;
+            background-color: #9b59b6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flexbox Flex Grow & Shrink</h1>
+
+    <div class="container">
+        <h2>Flex Grow Property</h2>
+
+        <h3>flex-grow: 0 (default)</h3>
+        <div class="flex-container wide-container">
+            <div class="flex-item flex-grow-0">Item 1<br><span class="demo-label">grow: 0</span></div>
+            <div class="flex-item flex-grow-0">Item 2<br><span class="demo-label">grow: 0</span></div>
+            <div class="flex-item flex-grow-0">Item 3<br><span class="demo-label">grow: 0</span></div>
+        </div>
+        <div class="code-example">flex-grow: 0; /* Items don't grow */</div>
+
+        <h3>flex-grow: 1</h3>
+        <div class="flex-container wide-container">
+            <div class="flex-item flex-grow-1">Item 1<br><span class="demo-label">grow: 1</span></div>
+            <div class="flex-item flex-grow-1">Item 2<br><span class="demo-label">grow: 1</span></div>
+            <div class="flex-item flex-grow-1">Item 3<br><span class="demo-label">grow: 1</span></div>
+        </div>
+        <div class="code-example">flex-grow: 1; /* Items grow equally */</div>
+
+        <h3>Mixed flex-grow values</h3>
+        <div class="flex-container wide-container">
+            <div class="flex-item flex-grow-1">Item 1<br><span class="demo-label">grow: 1</span></div>
+            <div class="flex-item flex-grow-2">Item 2<br><span class="demo-label">grow: 2</span></div>
+            <div class="flex-item flex-grow-1">Item 3<br><span class="demo-label">grow: 1</span></div>
+        </div>
+        <div class="code-example">flex-grow: 1, 2, 1; /* Middle item grows twice as much */</div>
+    </div>
+
+    <div class="container">
+        <h2>Flex Shrink Property</h2>
+
+        <h3>flex-shrink: 1 (default)</h3>
+        <div class="flex-container narrow-container">
+            <div class="flex-item large-item flex-shrink-1">Large Item 1<br><span class="demo-label">shrink: 1</span>
+            </div>
+            <div class="flex-item large-item flex-shrink-1">Large Item 2<br><span class="demo-label">shrink: 1</span>
+            </div>
+            <div class="flex-item large-item flex-shrink-1">Large Item 3<br><span class="demo-label">shrink: 1</span>
+            </div>
+        </div>
+        <div class="code-example">flex-shrink: 1; /* Items shrink equally */</div>
+
+        <h3>flex-shrink: 0</h3>
+        <div class="flex-container narrow-container">
+            <div class="flex-item large-item flex-shrink-0">No Shrink<br><span class="demo-label">shrink: 0</span></div>
+            <div class="flex-item large-item flex-shrink-1">Shrinks<br><span class="demo-label">shrink: 1</span></div>
+            <div class="flex-item large-item flex-shrink-1">Shrinks<br><span class="demo-label">shrink: 1</span></div>
+        </div>
+        <div class="code-example">flex-shrink: 0; /* First item won't shrink */</div>
+
+        <h3>Mixed flex-shrink values</h3>
+        <div class="flex-container narrow-container">
+            <div class="flex-item large-item flex-shrink-1">Item 1<br><span class="demo-label">shrink: 1</span></div>
+            <div class="flex-item large-item flex-shrink-2">Item 2<br><span class="demo-label">shrink: 2</span></div>
+            <div class="flex-item large-item flex-shrink-1">Item 3<br><span class="demo-label">shrink: 1</span></div>
+        </div>
+        <div class="code-example">flex-shrink: 1, 2, 1; /* Middle item shrinks twice as much */</div>
+    </div>
+
+    <div class="container">
+        <h2>Flex Basis Property</h2>
+
+        <h3>flex-basis: auto (default)</h3>
+        <div class="flex-container">
+            <div class="flex-item flex-basis-auto">Short</div>
+            <div class="flex-item flex-basis-auto">Medium Text</div>
+            <div class="flex-item flex-basis-auto">Very Long Text Content</div>
+        </div>
+        <div class="code-example">flex-basis: auto; /* Based on content */</div>
+
+        <h3>flex-basis: 100px</h3>
+        <div class="flex-container">
+            <div class="flex-item flex-basis-100">Item 1</div>
+            <div class="flex-item flex-basis-100">Item 2</div>
+            <div class="flex-item flex-basis-100">Item 3</div>
+        </div>
+        <div class="code-example">flex-basis: 100px; /* Fixed initial size */</div>
+
+        <h3>flex-basis: 200px</h3>
+        <div class="flex-container">
+            <div class="flex-item flex-basis-200">Item 1</div>
+            <div class="flex-item flex-basis-200">Item 2</div>
+            <div class="flex-item flex-basis-200">Item 3</div>
+        </div>
+        <div class="code-example">flex-basis: 200px; /* Larger initial size */</div>
+    </div>
+
+    <div class="container">
+        <h2>Flex Shorthand Property</h2>
+
+        <h3>flex: 1 (grow: 1, shrink: 1, basis: 0)</h3>
+        <div class="flex-container">
+            <div class="flex-item flex-1">Item 1</div>
+            <div class="flex-item flex-1">Item 2</div>
+            <div class="flex-item flex-1">Item 3</div>
+        </div>
+        <div class="code-example">flex: 1; /* Equal distribution */</div>
+
+        <h3>Mixed flex values</h3>
+        <div class="flex-container">
+            <div class="flex-item flex-1">Flex 1</div>
+            <div class="flex-item flex-2">Flex 2</div>
+            <div class="flex-item flex-1">Flex 1</div>
+        </div>
+        <div class="code-example">flex: 1, 2, 1; /* Middle item gets double space */</div>
+
+        <h3>flex: 0 0 auto (no grow, no shrink)</h3>
+        <div class="flex-container">
+            <div class="flex-item flex-0-0-auto">Fixed Size</div>
+            <div class="flex-item flex-1">Flexible</div>
+            <div class="flex-item flex-0-0-auto">Fixed Size</div>
+        </div>
+        <div class="code-example">flex: 0 0 auto; /* Fixed size items */</div>
+
+        <h3>Complex flex: 1 1 200px</h3>
+        <div class="flex-container">
+            <div class="flex-item flex-1-1-200">Item 1</div>
+            <div class="flex-item flex-1-1-200">Item 2</div>
+            <div class="flex-item flex-1-1-200">Item 3</div>
+        </div>
+        <div class="code-example">flex: 1 1 200px; /* grow: 1, shrink: 1, basis: 200px */</div>
+    </div>
+
+    <div class="container">
+        <h2>Practical Examples</h2>
+
+        <h3>Sidebar Layout</h3>
+        <div class="flex-container" style="height: 120px;">
+            <div class="flex-item flex-0-0-auto" style="width: 200px; background-color: #34495e;">
+                Sidebar<br><span class="demo-label">flex: 0 0 auto</span>
+            </div>
+            <div class="flex-item flex-1" style="background-color: #ecf0f1; color: #2c3e50;">
+                Main Content<br><span class="demo-label">flex: 1</span>
+            </div>
+        </div>
+        <div class="code-example">
+            .sidebar { flex: 0 0 auto; width: 200px; }<br>
+            .main-content { flex: 1; }
+        </div>
+
+        <h3>Navigation Bar</h3>
+        <div class="flex-container" style="background-color: #2c3e50;">
+            <div class="flex-item flex-0-0-auto" style="background-color: #3498db;">
+                Logo
+            </div>
+            <div class="flex-item flex-1" style="background-color: transparent; color: #ecf0f1;">
+                <!-- Spacer -->
+            </div>
+            <div class="flex-item flex-0-0-auto" style="background-color: #e74c3c;">
+                Menu
+            </div>
+        </div>
+        <div class="code-example">
+            .logo { flex: 0 0 auto; }<br>
+            .spacer { flex: 1; }<br>
+            .menu { flex: 0 0 auto; }
+        </div>
+
+        <h3>Card Layout</h3>
+        <div class="flex-container" style="flex-wrap: wrap; justify-content: space-between;">
+            <div class="flex-item" style="flex: 0 0 calc(33.333% - 10px); background-color: #1abc9c;">
+                Card 1
+            </div>
+            <div class="flex-item" style="flex: 0 0 calc(33.333% - 10px); background-color: #e67e22;">
+                Card 2
+            </div>
+            <div class="flex-item" style="flex: 0 0 calc(33.333% - 10px); background-color: #8e44ad;">
+                Card 3
+            </div>
+        </div>
+        <div class="code-example">
+            .card { flex: 0 0 calc(33.333% - 10px); }
+        </div>
+    </div>
+</body>
+
+</html>
