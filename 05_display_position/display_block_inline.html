@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Block and Inline</title>
+    <style>
+        .block-element {
+            display: block;
+            background-color: lightblue;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid blue;
+        }
+
+        .inline-element {
+            display: inline;
+            background-color: lightgreen;
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid green;
+        }
+
+        .inline-block-element {
+            display: inline-block;
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid red;
+            width: 100px;
+            height: 50px;
+        }
+
+        .none-element {
+            display: none;
+        }
+
+        .original-span {
+            background-color: yellow;
+            padding: 5px;
+        }
+
+        .original-div {
+            background-color: orange;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .changed-span {
+            display: block;
+            background-color: yellow;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .changed-div {
+            display: inline;
+            background-color: orange;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Display Property Examples</h1>
+
+    <h2>Block Elements</h2>
+    <div class="block-element">Block Element 1</div>
+    <div class="block-element">Block Element 2</div>
+    <div class="block-element">Block Element 3</div>
+
+    <h2>Inline Elements</h2>
+    <span class="inline-element">Inline 1</span>
+    <span class="inline-element">Inline 2</span>
+    <span class="inline-element">Inline 3</span>
+
+    <h2>Inline-Block Elements</h2>
+    <div class="inline-block-element">Inline-Block 1</div>
+    <div class="inline-block-element">Inline-Block 2</div>
+    <div class="inline-block-element">Inline-Block 3</div>
+
+    <h2>Original vs Changed Display</h2>
+    <p>Original span: <span class="original-span">I'm a span</span> inline by default</p>
+    <p>Changed span to block:</p>
+    <span class="changed-span">I'm a span displayed as block</span>
+
+    <div class="original-div">Original div (block)</div>
+    <p>Changed div to inline:
+    <div class="changed-div">I'm a div displayed as inline</div> continues here</p>
+
+    <h2>Display None</h2>
+    <p>Before hidden element</p>
+    <p class="none-element">This paragraph is hidden</p>
+    <p>After hidden element</p>
+</body>
+
+</html>
