@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index Examples</title>
+    <style>
+        .container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 50px auto;
+            background-color: #f0f0f0;
+            border: 2px solid black;
+        }
+
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+
+        .box1 {
+            background-color: red;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+
+        .box2 {
+            background-color: green;
+            top: 80px;
+            left: 80px;
+            z-index: 2;
+        }
+
+        .box3 {
+            background-color: blue;
+            top: 110px;
+            left: 110px;
+            z-index: 3;
+        }
+
+        .negative-z {
+            background-color: orange;
+            top: 20px;
+            left: 200px;
+            z-index: -1;
+        }
+
+        .high-z {
+            background-color: purple;
+            top: 150px;
+            left: 150px;
+            z-index: 999;
+        }
+
+        .no-z {
+            background-color: gray;
+            top: 200px;
+            left: 50px;
+        }
+
+        .hover-z {
+            background-color: pink;
+            top: 180px;
+            left: 250px;
+            z-index: 5;
+            transition: z-index 0.3s;
+        }
+
+        .hover-z:hover {
+            z-index: 1000;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Z-Index Layering Examples</h1>
+
+    <div class="container">
+        <div class="box box1">Z: 1</div>
+        <div class="box box2">Z: 2</div>
+        <div class="box box3">Z: 3</div>
+        <div class="box negative-z">Z: -1</div>
+        <div class="box high-z">Z: 999</div>
+        <div class="box no-z">No Z</div>
+        <div class="box hover-z">Hover me</div>
+    </div>
+
+    <p style="text-align: center; margin-top: 50px;">
+        Hover over the pink box to see z-index change dynamically
+    </p>
+</body>
+
+</html>
