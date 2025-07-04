@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Introduction</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            margin: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        .flex-container {
+            display: flex;
+            background-color: lightblue;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .flex-item {
+            background-color: lightcoral;
+            padding: 20px;
+            margin: 5px;
+            border: 1px solid red;
+            text-align: center;
+        }
+
+        .row-container {
+            flex-direction: row;
+        }
+
+        .column-container {
+            flex-direction: column;
+            height: 200px;
+        }
+
+        .row-reverse-container {
+            flex-direction: row-reverse;
+        }
+
+        .column-reverse-container {
+            flex-direction: column-reverse;
+            height: 200px;
+        }
+
+        .wrap-container {
+            flex-wrap: wrap;
+            width: 300px;
+        }
+
+        .nowrap-container {
+            flex-wrap: nowrap;
+            width: 300px;
+        }
+
+        .wrap-item {
+            min-width: 100px;
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flexbox Introduction</h1>
+
+    <div class="container">
+        <h2>Flex Direction: Row (Default)</h2>
+        <div class="flex-container row-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Flex Direction: Column</h2>
+        <div class="flex-container column-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Flex Direction: Row Reverse</h2>
+        <div class="flex-container row-reverse-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Flex Direction: Column Reverse</h2>
+        <div class="flex-container column-reverse-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Flex Wrap: Wrap</h2>
+        <div class="flex-container wrap-container">
+            <div class="wrap-item">Item 1</div>
+            <div class="wrap-item">Item 2</div>
+            <div class="wrap-item">Item 3</div>
+            <div class="wrap-item">Item 4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Flex Wrap: Nowrap (Default)</h2>
+        <div class="flex-container nowrap-container">
+            <div class="wrap-item">Item 1</div>
+            <div class="wrap-item">Item 2</div>
+            <div class="wrap-item">Item 3</div>
+            <div class="wrap-item">Item 4</div>
+        </div>
+    </div>
+</body>
+
+</html>
