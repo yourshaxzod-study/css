@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border and Outline</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 80px;
+            margin: 20px;
+            padding: 10px;
+            display: inline-block;
+            background-color: lightblue;
+        }
+
+        .solid-border {
+            border: 3px solid red;
+        }
+
+        .dashed-border {
+            border: 3px dashed green;
+        }
+
+        .dotted-border {
+            border: 3px dotted blue;
+        }
+
+        .double-border {
+            border: 5px double purple;
+        }
+
+        .specific-borders {
+            border-top: 2px solid red;
+            border-right: 4px dashed green;
+            border-bottom: 6px dotted blue;
+            border-left: 8px solid orange;
+        }
+
+        .rounded-corners {
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .circle {
+            border: 2px solid navy;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+        }
+
+        .outline-example {
+            border: 2px solid red;
+            outline: 3px solid blue;
+            outline-offset: 5px;
+        }
+
+        .no-outline {
+            border: 2px solid green;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Border and Outline Examples</h1>
+
+    <div class="box solid-border">Solid Border</div>
+    <div class="box dashed-border">Dashed Border</div>
+    <div class="box dotted-border">Dotted Border</div>
+    <div class="box double-border">Double Border</div>
+    <div class="box specific-borders">Specific Borders</div>
+    <div class="box rounded-corners">Rounded Corners</div>
+    <div class="box circle">Circle</div>
+    <div class="box outline-example">With Outline</div>
+    <div class="box no-outline">No Outline</div>
+</body>
+
+</html>
