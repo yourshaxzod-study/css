@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Scale Rotate</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 30px;
+            padding: 50px;
+        }
+
+        .transform-box {
+            width: 100px;
+            height: 100px;
+            background: #34495e;
+            transition: transform 0.3s ease;
+        }
+
+        .scale:hover {
+            transform: scale(1.5);
+        }
+
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        .skew:hover {
+            transform: skew(20deg, 10deg);
+        }
+
+        .translate:hover {
+            transform: translateY(-20px);
+        }
+
+        .combine:hover {
+            transform: scale(1.2) rotate(15deg) translateY(-10px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="transform-box scale"></div>
+        <div class="transform-box rotate"></div>
+        <div class="transform-box skew"></div>
+        <div class="transform-box translate"></div>
+        <div class="transform-box combine"></div>
+    </div>
+</body>
+
+</html>
